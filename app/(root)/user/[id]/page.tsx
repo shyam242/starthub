@@ -1,6 +1,6 @@
 import { auth } from "@/auth";
-import { client } from "@/src/sanity/lib/client";
-import { AUTHOR_BY_ID_QUERY } from "@/src/sanity/lib/query";
+import { client } from "@/sanity/lib/client";
+import { AUTHOR_BY_ID_QUERY } from "@/sanity/lib/query";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import UserStartups from "@/src/components/userstartup";
