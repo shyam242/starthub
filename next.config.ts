@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import path from "path";
 
 const nextConfig: NextConfig = {
   typescript: {
@@ -13,18 +12,11 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       { protocol: "https", hostname: "avatars.githubusercontent.com" },
       { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "cdn.sanity.io" },
     ],
   },
   devIndicators: {
     position: "bottom-right",
-  },
-  experimental: {
-    // @ts-ignore
-    appDir: true,
-  } as any,
-  webpack: (config) => {
-    config.resolve.modules.push(path.resolve(__dirname, "src"));
-    return config;
   },
 };
 
